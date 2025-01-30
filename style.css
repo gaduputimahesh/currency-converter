@@ -1,0 +1,157 @@
+:root {
+    --bgCol: #00C4FF;
+    --btnCol: #AE2468;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: rgb(0, 0, 0); */
+    font-family: Gilroy;
+    text-transform: capitalize;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgCol)
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 45vh;
+    width: 333px;
+    box-shadow: 2px 2px 70px rgba(0, 0, 0, 0.349);
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+}
+
+p,
+.msg {
+    font-weight: 500;
+}
+
+form select,
+button,
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+
+form input {
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.dropdown i {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+.select-container img {
+    max-width: 2rem;
+    border-radius: 6%;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+
+
+}
+
+.select-container select {
+    font-size: 1rem;
+    width: auto;
+}
+
+.msg {
+    margin: 2rem 0 2rem 0;
+}
+
+form button {
+    height: 3rem;
+    color: white;
+    background: linear-gradient(to bottom, var(--btnCol), #81194d);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+
+}
+
+form button:active {
+    scale: 0.9;
+}
+
+form button::before {
+    content: "";
+    height: 8rem;
+    width: 3rem;
+    transform: rotate(20deg);
+    top: -25px;
+    left: -65px;
+    position: absolute;
+    background-color: red;
+    animation: btnAn 3s ease infinite;
+    background-color: rgba(255, 202, 202, 0.11);
+    box-shadow: 2px 0px 30px 30px rgba(255, 202, 202, 0.11);
+
+}
+
+option {
+    color: white;
+    background-color: #191919;
+}
+
+@keyframes btnAn {
+    from {
+        left: -65px;
+    }
+
+    to {
+        left: 300px;
+    }
+}
+
+
+/* @media (max-width : 380px) {
+    .container {
+        padding: 1rem;
+        max-width: 90vw;
+    }
+
+} */
